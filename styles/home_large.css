@@ -1,0 +1,101 @@
+
+@media (min-width: 640px) {
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .profile-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1.25rem;
+    }
+
+    .profile-grid .card {
+        margin-bottom: 0;
+    }
+
+    .student-photo {
+        max-width: 100%;
+    }
+
+    .footer-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+
+@media (min-width: 960px) {
+    .hamburger {
+        display: none;
+    }
+
+    .main-nav {
+        display: block !important;
+        background-color: var(--clr-heading-bar);
+    }
+
+    .nav-list {
+        flex-direction: row;
+        justify-content: flex-start;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    .nav-link {
+        border-bottom: none;
+        padding: 0.65rem 1.25rem;
+        font-size: 0.9rem;
+        position: relative;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: var(--clr-secondary);
+        transition: width var(--transition);
+    }
+
+    .nav-link:hover::after {
+        width: 80%;
+    }
+
+    .nav-link.active::after {
+        width: 80%;
+    }
+
+    .nav-link:hover {
+        background-color: transparent;
+        color: var(--clr-secondary);
+    }
+
+    .site-name {
+        font-size: 1.15rem;
+    }
+
+    main {
+        padding: 1.5rem 2rem 3rem;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .courses-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 0.5rem;
+    }
+
+    .course-item:hover {
+        transform: translateY(-2px);
+    }
+}
