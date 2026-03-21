@@ -1,0 +1,84 @@
+{
+    "members": [
+        {
+            "name": "Café Basilique",
+            "address": "Boulevard de la Basilique, Yamoussoukro",
+            "phone": "+225 27 64 00 10",
+            "website": "https://baab.ci/etablissements_baab/le-belier-dor/",
+            "image": "cafe-basilic.jpg",
+            "membershipLevel": 3,
+            "description": "Restaurant et café offrant une cuisine ivoirienne raffinée avec vue sur la Basilique.",
+            "yearJoined": 2018
+        },
+        {
+            "name": "Hôtel Président",
+            "address": "Rue des Ministères, Yamoussoukro",
+            "phone": "+225 27 64 11 22",
+            "website": "https://www.tripadvisor.com/Hotel_Review-g294193-d479741-Reviews-Hotel_President-Yamoussoukro_Lacs_Region.html",
+            "image": "hotel-president.webp",
+            "membershipLevel": 3,
+            "description": "Hôtel de luxe au cœur de la capitale politique avec salles de conférence et piscine.",
+            "yearJoined": 2015
+        },
+        {
+            "name": "TechYam Solutions",
+            "address": "Quartier Habitat, Yamoussoukro",
+            "phone": "+225 07 88 55 33",
+            "website": "https://techyam.ci",
+            "image": "techyam.webp",
+            "membershipLevel": 2,
+            "description": "Entreprise de services informatiques spécialisée en développement web et mobile.",
+            "yearJoined": 2021
+        },
+        {
+            "name": "Pharmacie Centrale",
+            "address": "Avenue Houphouët-Boigny, Yamoussoukro",
+            "phone": "+225 27 64 22 33",
+            "website": "https://pharmacie-centrale-yakro.ci",
+            "image": "pharmacie-centrale.webp",
+            "membershipLevel": 2,
+            "description": "Pharmacie moderne offrant une large gamme de médicaments et conseils de santé.",
+            "yearJoined": 2019
+        },
+        {
+            "name": "Transport Express Baoulé",
+            "address": "Gare Routière, Yamoussoukro",
+            "phone": "+225 05 44 77 88",
+            "website": "https://teb-transport.ci",
+            "image": "transport-express.webp",
+            "membershipLevel": 1,
+            "description": "Service de transport interurbain reliant Yamoussoukro aux principales villes de Côte d'Ivoire.",
+            "yearJoined": 2020
+        },
+        {
+            "name": "Restaurant La Terrasse du Lac",
+            "address": "Bord du Lac Kossou, Yamoussoukro",
+            "phone": "+225 27 64 33 10",
+            "website": "https://www.facebook.com/laterrassedulac.yamoussoukro",
+            "image": "terrasse-du-lac.jpg",
+            "membershipLevel": 3,
+            "description": "Restaurant panoramique au bord du lac avec spécialités de poissons frais et grillades ivoiriennes.",
+            "yearJoined": 2016
+        },
+        {
+            "name": "Maquis Chez Marie",
+            "address": "Quartier Millionnaire, Yamoussoukro",
+            "phone": "+225 05 72 44 19",
+            "website": "https://www.facebook.com/maquischemarie.yakro",
+            "image": "chez-marie.jpg",
+            "membershipLevel": 2,
+            "description": "Maquis populaire réputé pour son attiéké-poisson, ses brochettes et son ambiance conviviale.",
+            "yearJoined": 2019
+        },
+        {
+            "name": "Boulangerie-Pâtisserie du Palais",
+            "address": "Avenue du Palais Présidentiel, Yamoussoukro",
+            "phone": "+225 07 55 22 88",
+            "website": "https://www.facebook.com/boulangerie.palais.yakro",
+            "image": "boulangerie-palais.jpg",
+            "membershipLevel": 1,
+            "description": "Boulangerie artisanale proposant pains frais, viennoiseries et pâtisseries maison depuis plus de 10 ans.",
+            "yearJoined": 2021
+        }
+    ]
+}
