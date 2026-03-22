@@ -27,7 +27,7 @@
             "website": "https://www.google.com/maps/place/The+Millionaire/@6.8034508,-5.2487872,17z/data=!4m14!1m7!3m6!1s0xfb897296a258191:0x71e12e705efd64ab!2sThe+Millionaire!8m2!3d6.8034508!4d-5.2487872!16s%2Fg%2F11k584gd86!3m5!1s0xfb897296a258191:0x71e12e705efd64ab!8m2!3d6.8034508!4d-5.2487872!16s%2Fg%2F11k584gd86?entry=ttu&g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D",
             "image": "resto-millionaire.webp",
             "membershipLevel": 2,
-            "description": "Entreprise de services informatiques spécialisée en développement web et mobile.",
+            "description": "Restaurant le millionaire au quartier Nanan",
             "yearJoined": 2021
         },
         {
@@ -37,7 +37,7 @@
             "website": "https://basiliquenotredame-delapaix.com/",
             "image": "basilique-yakro.jpg",
             "membershipLevel": 2,
-            "description": "Pharmacie moderne offrant une large gamme de médicaments et conseils de santé.",
+            "description": "Basilique notre dame de la paix",
             "yearJoined": 2019
         },
         {
@@ -47,7 +47,7 @@
             "website": "https://www.tripadvisor.fr/Restaurant_Review-g294193-d5775025-Reviews-La_Brise-Yamoussoukro_Lacs_Region.html",
             "image": "restaurant-la-brise.jpeg",
             "membershipLevel": 1,
-            "description": "Service de transport interurbain reliant Yamoussoukro aux principales villes de Côte d'Ivoire.",
+            "description": "Reaturant superbement beau, au coeur de la ville de yamoussoukro",
             "yearJoined": 2020
         },
         {
