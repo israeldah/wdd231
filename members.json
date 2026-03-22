@@ -26,7 +26,7 @@
             "phone": "+225 07 58 61 61 02",
             "website": "https://www.google.com/maps/place/The+Millionaire/@6.8034508,-5.2487872,17z/data=!4m14!1m7!3m6!1s0xfb897296a258191:0x71e12e705efd64ab!2sThe+Millionaire!8m2!3d6.8034508!4d-5.2487872!16s%2Fg%2F11k584gd86!3m5!1s0xfb897296a258191:0x71e12e705efd64ab!8m2!3d6.8034508!4d-5.2487872!16s%2Fg%2F11k584gd86?entry=ttu&g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D",
             "image": "resto-millionaire.webp",
-            "membershipLevel": 2,
+            "membershipLevel": 3,
             "description": "Restaurant le millionaire au quartier Nanan",
             "yearJoined": 2021
         },
@@ -36,7 +36,7 @@
             "phone": "+225 27 64 22 33",
             "website": "https://basiliquenotredame-delapaix.com/",
             "image": "basilique-yakro.jpg",
-            "membershipLevel": 2,
+            "membershipLevel": 3,
             "description": "Basilique notre dame de la paix",
             "yearJoined": 2019
         },
@@ -46,7 +46,7 @@
             "phone": "+225 05 44 77 88",
             "website": "https://www.tripadvisor.fr/Restaurant_Review-g294193-d5775025-Reviews-La_Brise-Yamoussoukro_Lacs_Region.html",
             "image": "restaurant-la-brise.jpeg",
-            "membershipLevel": 1,
+            "membershipLevel": 2,
             "description": "Reaturant superbement beau, au coeur de la ville de yamoussoukro",
             "yearJoined": 2020
         },
@@ -56,7 +56,7 @@
             "phone": "+225 27 64 33 10",
             "website": "https://baab.ci/etablissements_baab/multiplex-saveurs-des-lacs/",
             "image": "saveurs-des-lacs.jpg",
-            "membershipLevel": 3,
+            "membershipLevel": 2,
             "description": "Restaurant panoramique au bord du lac avec spécialités de poissons frais et grillades ivoiriennes.",
             "yearJoined": 2016
         },
