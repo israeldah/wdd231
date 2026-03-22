@@ -21,31 +21,31 @@
             "yearJoined": 2015
         },
         {
-            "name": "TechYam Solutions",
-            "address": "Quartier Habitat, Yamoussoukro",
-            "phone": "+225 07 88 55 33",
-            "website": "https://techyam.ci",
-            "image": "techyam.webp",
+            "name": "Restaurant le Millionnaire",
+            "address": "Quartier Millionnaire, Yamoussoukro",
+            "phone": "+225 07 58 61 61 02",
+            "website": "https://www.google.com/maps/place/The+Millionaire/@6.8034508,-5.2487872,17z/data=!4m14!1m7!3m6!1s0xfb897296a258191:0x71e12e705efd64ab!2sThe+Millionaire!8m2!3d6.8034508!4d-5.2487872!16s%2Fg%2F11k584gd86!3m5!1s0xfb897296a258191:0x71e12e705efd64ab!8m2!3d6.8034508!4d-5.2487872!16s%2Fg%2F11k584gd86?entry=ttu&g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D",
+            "image": "resto-millionaire.webp",
             "membershipLevel": 2,
             "description": "Entreprise de services informatiques spécialisée en développement web et mobile.",
             "yearJoined": 2021
         },
         {
-            "name": "Pharmacie Centrale",
+            "name": "Basilique Notre Dame de la Paix",
             "address": "Avenue Houphouët-Boigny, Yamoussoukro",
             "phone": "+225 27 64 22 33",
-            "website": "https://pharmacie-centrale-yakro.ci",
-            "image": "pharmacie-centrale.webp",
+            "website": "https://basiliquenotredame-delapaix.com/",
+            "image": "basilique-yakro.jpg",
             "membershipLevel": 2,
             "description": "Pharmacie moderne offrant une large gamme de médicaments et conseils de santé.",
             "yearJoined": 2019
         },
         {
-            "name": "Transport Express Baoulé",
+            "name": "Restaurant la Brise",
             "address": "Gare Routière, Yamoussoukro",
             "phone": "+225 05 44 77 88",
-            "website": "https://teb-transport.ci",
-            "image": "transport-express.webp",
+            "website": "https://www.tripadvisor.fr/Restaurant_Review-g294193-d5775025-Reviews-La_Brise-Yamoussoukro_Lacs_Region.html",
+            "image": "restaurant-la-brise.jpeg",
             "membershipLevel": 1,
             "description": "Service de transport interurbain reliant Yamoussoukro aux principales villes de Côte d'Ivoire.",
             "yearJoined": 2020
@@ -61,21 +61,21 @@
             "yearJoined": 2016
         },
         {
-            "name": "Maquis Chez Marie",
+            "name": "Maquis Chez Mario",
             "address": "Quartier Millionnaire, Yamoussoukro",
             "phone": "+225 05 72 44 19",
-            "website": "https://www.facebook.com/maquischemarie.yakro",
-            "image": "chez-marie.jpg",
+            "website": "https://baab.ci/etablissements_baab/chez-mario/",
+            "image": "chez-mario-yakro.jpg",
             "membershipLevel": 2,
             "description": "Maquis populaire réputé pour son attiéké-poisson, ses brochettes et son ambiance conviviale.",
             "yearJoined": 2019
         },
         {
-            "name": "Boulangerie-Pâtisserie du Palais",
+            "name": "Epis d'Or",
             "address": "Avenue du Palais Présidentiel, Yamoussoukro",
             "phone": "+225 07 55 22 88",
-            "website": "https://www.facebook.com/boulangerie.palais.yakro",
-            "image": "boulangerie-palais.jpg",
+            "website": "https://www.facebook.com/lepidorYamoussoukro225/",
+            "image": "epis-d'or.jpg",
             "membershipLevel": 1,
             "description": "Boulangerie artisanale proposant pains frais, viennoiseries et pâtisseries maison depuis plus de 10 ans.",
             "yearJoined": 2021
