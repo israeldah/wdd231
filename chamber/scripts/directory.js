@@ -72,12 +72,16 @@ gridViewBtn.addEventListener('click', () => {
     membersContainer.classList.remove('list-view');
     gridViewBtn.classList.add('active');
     listViewBtn.classList.remove('active');
+    gridViewBtn.setAttribute('aria-pressed', 'true');
+    listViewBtn.setAttribute('aria-pressed', 'false');
 });
 
 listViewBtn.addEventListener('click', () => {
     membersContainer.classList.add('list-view');
     listViewBtn.classList.add('active');
     gridViewBtn.classList.remove('active');
+    listViewBtn.setAttribute('aria-pressed', 'true');
+    gridViewBtn.setAttribute('aria-pressed', 'false');
 });
 
 // Initialize

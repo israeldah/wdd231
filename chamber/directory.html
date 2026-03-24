@@ -9,10 +9,7 @@
     <meta name="author" content="Dah Evangelis Israël">
     <title>Directory | Chambre de Commerce de Yamoussoukro</title>
 
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-
-    <!-- Facebook Open Graph Meta -->
     <meta property="og:title" content="Chambre de Commerce de Yamoussoukro">
     <meta property="og:description"
         content="Répertoire des entreprises et organisations membres de la Chambre de Commerce de Yamoussoukro">
@@ -61,10 +58,10 @@
                 </button>
             </div>
         </div>
-        <nav class="main-nav" id="mainNav">
+        <nav class="main-nav" id="mainNav" aria-label="Navigation principale">
             <ul class="nav-list">
                 <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="directory.html" class="nav-link active">Directory</a></li>
+                <li><a href="directory.html" class="nav-link active" aria-current="page">Directory</a></li>
                 <li><a href="join.html" class="nav-link">Join</a></li>
                 <li><a href="discover.html" class="nav-link">Discover</a></li>
             </ul>
@@ -76,16 +73,16 @@
         <div class="directory-header">
             <h1 class="page-title">Directory</h1>
             <div class="view-toggle">
-                <button class="toggle-btn active" id="gridViewBtn" aria-label="Grid view">
-                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <button class="toggle-btn active" id="gridViewBtn" aria-label="Grid view" aria-pressed="true">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
                         <rect x="3" y="3" width="7" height="7" rx="1" />
                         <rect x="14" y="3" width="7" height="7" rx="1" />
                         <rect x="3" y="14" width="7" height="7" rx="1" />
                         <rect x="14" y="14" width="7" height="7" rx="1" />
                     </svg>
                 </button>
-                <button class="toggle-btn" id="listViewBtn" aria-label="List view">
-                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <button class="toggle-btn" id="listViewBtn" aria-label="List view" aria-pressed="false">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
                         <rect x="3" y="4" width="18" height="3" rx="1" />
                         <rect x="3" y="10.5" width="18" height="3" rx="1" />
                         <rect x="3" y="17" width="18" height="3" rx="1" />
@@ -94,7 +91,7 @@
             </div>
         </div>
 
-        <div class="members-container" id="membersContainer">
+        <div class="members-container" id="membersContainer" aria-live="polite" aria-label="Liste des membres">
             <!-- Populated dynamically by directory.js -->
         </div>
     </main>

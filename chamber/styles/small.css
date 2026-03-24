@@ -15,8 +15,8 @@
     --clr-footer-bg: #1a1a1a;
     --clr-footer-text: #d4d4d4;
     --clr-gold: #c9a227;
-    --clr-silver: #8a8a8a;
-    --clr-member: #5a7d6a;
+    --clr-silver: #777777;
+    --clr-member: #4a6b5a;
     --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
     --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
     --shadow-lg: 0 8px 24px rgba(0,0,0,0.14);
@@ -92,6 +92,13 @@ address {
 button {
     cursor: pointer;
     font-family: inherit;
+}
+
+/* Keyboard focus indicator */
+:focus-visible {
+    outline: 3px solid var(--clr-secondary);
+    outline-offset: 3px;
+    border-radius: 2px;
 }
 
 /* ========================================
@@ -515,5 +522,5 @@ main {
 .footer-meta {
     font-size: 0.78rem;
     line-height: 1.8;
-    color: var(--clr-text-muted);
+    color: var(--clr-footer-text);
 }
