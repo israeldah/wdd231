@@ -4,10 +4,41 @@
 
 /* ---- Tablet (≥ 640px) ---- */
 @media (min-width: 640px) {
+
+    /* Directory: 2-column grid */
     .members-container {
         grid-template-columns: 1fr 1fr;
     }
 
+    /* Home info grid: 2 columns, CTA spans full width */
+    .home-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Spotlights: 2 columns at tablet */
+    .spotlights-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Hero: side-by-side text + image */
+    .hero {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        padding: 2.5rem 2rem;
+        gap: 2rem;
+    }
+
+    .hero-content { text-align: left; }
+
+    .hero h1 { font-size: 1.8rem; }
+
+    .hero p { margin-left: 0; margin-right: 0; }
+
+    .hero-img { max-width: 220px; }
+
+    /* Footer: row layout */
     .footer-inner {
         flex-direction: row;
         justify-content: space-between;
@@ -15,9 +46,7 @@
         flex-wrap: wrap;
     }
 
-    .footer-social {
-        order: 0;
-    }
+    .footer-social { order: 0; }
 
     .footer-meta {
         width: 100%;
@@ -27,10 +56,9 @@
 
 /* ---- Desktop (≥ 960px) ---- */
 @media (min-width: 960px) {
-    /* Header — show nav inline, hide hamburger */
-    .hamburger {
-        display: none;
-    }
+
+    /* Header: inline nav, hide hamburger */
+    .hamburger { display: none; }
 
     .main-nav {
         display: block !important;
@@ -65,39 +93,44 @@
     }
 
     .nav-link:hover::after,
-    .nav-link.active::after {
-        width: 80%;
-    }
+    .nav-link.active::after { width: 80%; }
 
     .nav-link:hover {
         background-color: transparent;
         color: var(--clr-secondary);
     }
 
-    .logo-text {
-        font-size: 1.1rem;
-    }
+    .logo-text { font-size: 1.1rem; }
 
-    /* Directory grid: 3 columns */
+    /* Directory: 3-column grid */
     .members-container {
         grid-template-columns: repeat(3, 1fr);
         gap: 1.25rem;
     }
 
-    /* List view stays 1 column */
-    .members-container.list-view {
-        grid-template-columns: 1fr;
+    .members-container.list-view { grid-template-columns: 1fr; }
+
+    /* Home: 3-column info grid */
+    .home-grid { grid-template-columns: repeat(3, 1fr); }
+
+    /* Spotlights: 3 columns */
+    .spotlights-grid { grid-template-columns: repeat(3, 1fr); }
+
+    /* Hero: bigger text, more padding */
+    .hero {
+        padding: 3.5rem 3rem;
+        gap: 3rem;
     }
 
-    /* Footer: 3 columns */
-    .footer-inner {
-        flex-wrap: nowrap;
-    }
+    .hero h1 { font-size: 2.2rem; }
+
+    .hero-img { max-width: 260px; }
+
+    /* Footer: no wrap */
+    .footer-inner { flex-wrap: nowrap; }
 
     .footer-meta {
         width: auto;
         text-align: right;
     }
 }
-
-
