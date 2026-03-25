@@ -27,7 +27,7 @@ const levelMap = {
 // Fetch and display members
 async function loadMembers() {
     try {
-        const response = await fetch('../members.json');
+        const response = await fetch('members.json');
         if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
         const data = await response.json();
         displayMembers(data.members);
@@ -48,7 +48,7 @@ function displayMembers(members) {
         card.className = 'member-card';
 
         card.innerHTML = `
-            <img src="../images/${member.image}" alt="${member.name}" class="member-card-img" width="400" height="160">
+            <img src="images/${member.image}" alt="${member.name}" class="member-card-img" width="400" height="160">
             <div class="member-card-body">
                 <div class="member-card-top">
                     <h2 class="member-name">${member.name}</h2>

@@ -135,7 +135,7 @@ const LEVEL_INFO = {
 
 async function loadSpotlights() {
     try {
-        const res = await fetch('../members.json');
+        const res = await fetch('members.json');
         if (!res.ok) throw new Error(`HTTP error: ${res.status}`);
         const { members } = await res.json();
 
@@ -154,7 +154,7 @@ async function loadSpotlights() {
             const card = document.createElement('article');
             card.className = 'spotlight-card';
             card.innerHTML = `
-                <img src="../images/${m.image}"
+                <img src="images/${m.image}"
                      alt="Logo de ${m.name}"
                      class="spotlight-img"
                      width="300" height="160">
