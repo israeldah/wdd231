@@ -1,4 +1,3 @@
-
 :root {
     --clr-primary: #1a5632;
     --clr-primary-light: #2a7d4f;
@@ -14,8 +13,8 @@
     --clr-footer-text: #d4d4d4;
     --clr-completed: #d4edda;
     --clr-not-completed: #e8e2d9;
-    --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
-    --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
     --radius: 6px;
     --font-display: 'Playfair Display', Georgia, serif;
     --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
@@ -161,7 +160,7 @@ button {
     color: #ffffff;
     font-weight: 600;
     font-size: 0.95rem;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     transition: background-color var(--transition);
 }
 
@@ -241,6 +240,12 @@ main {
     object-fit: cover;
     border-radius: var(--radius);
     background-color: #c0c0c0;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.student-photo:hover {
+    transform: scale(1.04) rotate(1deg);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -286,11 +291,13 @@ main {
     font-weight: 600;
     font-size: 0.9rem;
     text-align: center;
-    transition: transform var(--transition);
+    transition: transform var(--transition), box-shadow var(--transition), letter-spacing var(--transition);
 }
 
 .course-item:hover {
-    transform: translateX(4px);
+    transform: translateX(6px) scale(1.02);
+    box-shadow: var(--shadow-md);
+    letter-spacing: 0.03em;
 }
 
 .course-item.completed {
@@ -310,6 +317,80 @@ main {
     margin-top: 0.5rem;
 }
 
+
+/* ── Modal dialog ── */
+dialog {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    background-color: var(--clr-surface);
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-family: var(--font-body);
+}
+
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog button#closeModal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.35rem 0.75rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: var(--radius);
+    background-color: var(--clr-surface-alt);
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color var(--transition);
+}
+
+dialog button#closeModal:hover {
+    background-color: var(--clr-accent);
+    color: #fff;
+    border-color: var(--clr-accent);
+}
+
+dialog h2 {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--clr-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.25rem;
+}
+
+dialog h3 {
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--clr-primary);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+dialog p {
+    font-size: 0.9rem;
+    color: var(--clr-text);
+    line-height: 1.7;
+    margin-bottom: 0.45rem;
+}
+
+/* Make course items look clickable */
+.course-item {
+    cursor: pointer;
+}
+
+/* ── End Modal ── */
 
 .site-footer {
     background-color: var(--clr-footer-bg);
@@ -340,7 +421,7 @@ main {
 
 .footer-social a:hover {
     color: var(--clr-secondary);
-    transform: scale(1.15);
+    transform: scale(1.2) rotate(8deg);
 }
 
 .footer-info p,
@@ -355,9 +436,19 @@ main {
     animation: slideUp 0.45s ease both;
 }
 
-.card:nth-child(1) { animation-delay: 0.05s; }
-.card:nth-child(2) { animation-delay: 0.12s; }
-.card:nth-child(3) { animation-delay: 0.2s; }
+.card:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.card:nth-child(2) {
+    animation-delay: 0.12s;
+}
+
+.card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+
 
 @keyframes slideUp {
     from {
@@ -367,5 +458,74 @@ main {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Dialog pop-in */
+@keyframes dialogOpen {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -48%) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+dialog[open] {
+    animation: dialogOpen 0.25s ease both;
+}
+
+/* Backdrop fade */
+@keyframes backdropFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+::backdrop {
+    animation: backdropFade 0.25s ease both;
+}
+
+/* Logo subtle pulse on load */
+@keyframes logoPulse {
+    0%, 100% { transform: scale(1);   }
+    50%       { transform: scale(1.06); }
+}
+
+.logo-svg {
+    animation: logoPulse 3s ease-in-out 0.5s 2;
+}
+
+/* Filter button active underline sweep */
+.filter-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background-color: var(--clr-primary);
+    transition: left 0.3s ease;
+}
+
+.filter-btn:hover::after,
+.filter-btn.active::after {
+    left: 0;
+}
+
+/* ── Accessibility: respect reduced motion preference ── */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }
