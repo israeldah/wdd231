@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Rejoignez la Chambre de Commerce de Yamoussoukro – choisissez votre niveau d'adhésion.">
+    <meta name="author" content="Dah Evangelis Israël">
+    <title>Adhésion | Chambre de Commerce de Yamoussoukro</title>
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <meta property="og:title" content="Rejoindre la Chambre de Commerce de Yamoussoukro">
+    <meta property="og:description" content="Devenez membre de la Chambre de Commerce de Yamoussoukro.">
+    <meta property="og:image" content="https://israeldah.github.io/wdd231/chamber/images/hotel-president.webp">
+    <meta property="og:url" content="https://israeldah.github.io/wdd231/chamber/join.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo-group">
+                <svg class="logo-svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect width="50" height="50" rx="8" fill="#1a5632" />
+                    <text x="25" y="20" text-anchor="middle" font-size="11" font-weight="bold" fill="#c9a227"
+                        font-family="serif">CC</text>
+                    <text x="25" y="38" text-anchor="middle" font-size="8" fill="#ffffff"
+                        font-family="sans-serif">YAKRO</text>
+                </svg>
+                <span class="logo-text">Chambre de Commerce de Yamoussoukro</span>
+            </div>
+            <div class="header-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Basculer le mode sombre">
+                    <span class="theme-icon">◐</span>
+                </button>
+                <button class="hamburger" id="hamburgerBtn" aria-label="Ouvrir le menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+        <nav class="main-nav" id="mainNav" aria-label="Navigation principale">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="directory.html" class="nav-link">Directory</a></li>
+                <li><a href="join.html" class="nav-link active" aria-current="page">Join</a></li>
+                <li><a href="discover.html" class="nav-link">Discover</a></li>
+                <li><a href="../index.html" class="nav-link">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========== MAIN ========== -->
+    <main>
+        <h1 class="page-title">Rejoindre la Chambre</h1>
+
+        <div class="join-layout">
+
+            <!-- ── APPLICATION FORM ── -->
+            <section class="join-form-section" aria-label="Formulaire d'adhésion">
+                <h2>Formulaire d'Adhésion</h2>
+                <form method="get" action="thankyou.html" class="join-form" novalidate>
+
+                    <label for="fname">
+                        Prénom <span class="required-star" aria-hidden="true">*</span>
+                        <input type="text" id="fname" name="fname" required
+                            autocomplete="given-name"
+                            title="Entrez votre prénom"
+                            placeholder="Jean">
+                    </label>
+
+                    <label for="lname">
+                        Nom <span class="required-star" aria-hidden="true">*</span>
+                        <input type="text" id="lname" name="lname" required
+                            autocomplete="family-name"
+                            title="Entrez votre nom de famille"
+                            placeholder="Kouassi">
+                    </label>
+
+                    <label for="org-title">
+                        Titre dans l'organisation
+                        <input type="text" id="org-title" name="org-title"
+                            autocomplete="organization-title"
+                            title="Votre titre (ex : Directeur Général) — min. 7 caractères, lettres, espaces et tirets"
+                            pattern="[A-Za-zÀ-ÿ\- ]{7,}"
+                            placeholder="Directeur Général">
+                    </label>
+
+                    <label for="email">
+                        Adresse e-mail <span class="required-star" aria-hidden="true">*</span>
+                        <input type="email" id="email" name="email" required
+                            autocomplete="email"
+                            title="Entrez une adresse e-mail valide"
+                            placeholder="exemple@domaine.ci">
+                    </label>
+
+                    <label for="phone">
+                        Téléphone mobile <span class="required-star" aria-hidden="true">*</span>
+                        <input type="tel" id="phone" name="phone" required
+                            autocomplete="tel"
+                            title="Entrez votre numéro de téléphone mobile"
+                            placeholder="+225 07 00 00 00">
+                    </label>
+
+                    <label for="org">
+                        Nom de l'organisation <span class="required-star" aria-hidden="true">*</span>
+                        <input type="text" id="org" name="org" required
+                            autocomplete="organization"
+                            title="Entrez le nom de votre entreprise ou organisation"
+                            placeholder="Ma Société SARL">
+                    </label>
+
+                    <label for="membership">
+                        Niveau d'adhésion <span class="required-star" aria-hidden="true">*</span>
+                        <select id="membership" name="membership" required
+                            title="Sélectionnez votre niveau d'adhésion">
+                            <option value="" disabled selected>-- Choisissez un niveau --</option>
+                            <option value="np">Adhésion NP (non lucratif – gratuit)</option>
+                            <option value="bronze">Adhésion Bronze</option>
+                            <option value="silver">Adhésion Silver</option>
+                            <option value="gold">Adhésion Gold</option>
+                        </select>
+                    </label>
+
+                    <label for="desc">
+                        Description de l'organisation
+                        <textarea id="desc" name="desc" rows="4"
+                            title="Décrivez brièvement votre organisation"
+                            placeholder="Décrivez votre activité, vos produits ou services…"></textarea>
+                    </label>
+
+                    <!-- Hidden timestamp -->
+                    <input type="hidden" id="timestamp" name="timestamp">
+
+                    <p class="form-note"><span class="required-star">*</span> Champs obligatoires</p>
+
+                    <input type="submit" value="Soumettre la demande" class="submit-btn">
+                </form>
+            </section>
+
+            <!-- ── MEMBERSHIP LEVEL CARDS ── -->
+            <aside class="membership-cards" aria-label="Niveaux d'adhésion">
+                <h2>Nos Niveaux d'Adhésion</h2>
+
+                <article class="level-card level-np" style="animation-delay: 0.05s">
+                    <div class="level-icon">🌿</div>
+                    <h3>NP</h3>
+                    <p class="level-price">Gratuit</p>
+                    <p class="level-subtitle">Pour les organisations à but non lucratif</p>
+                    <button class="level-info-btn" data-modal="modal-np"
+                        aria-haspopup="dialog">En savoir plus</button>
+                </article>
+
+                <article class="level-card level-bronze" style="animation-delay: 0.15s">
+                    <div class="level-icon">🥉</div>
+                    <h3>Bronze</h3>
+                    <p class="level-price">50 000 FCFA / an</p>
+                    <p class="level-subtitle">Visibilité et réseau de base</p>
+                    <button class="level-info-btn" data-modal="modal-bronze"
+                        aria-haspopup="dialog">En savoir plus</button>
+                </article>
+
+                <article class="level-card level-silver" style="animation-delay: 0.25s">
+                    <div class="level-icon">🥈</div>
+                    <h3>Silver</h3>
+                    <p class="level-price">150 000 FCFA / an</p>
+                    <p class="level-subtitle">Avantages avancés et formations</p>
+                    <button class="level-info-btn" data-modal="modal-silver"
+                        aria-haspopup="dialog">En savoir plus</button>
+                </article>
+
+                <article class="level-card level-gold" style="animation-delay: 0.35s">
+                    <div class="level-icon">🥇</div>
+                    <h3>Gold</h3>
+                    <p class="level-price">300 000 FCFA / an</p>
+                    <p class="level-subtitle">Visibilité maximale et tous les avantages</p>
+                    <button class="level-info-btn" data-modal="modal-gold"
+                        aria-haspopup="dialog">En savoir plus</button>
+                </article>
+            </aside>
+        </div>
+
+        <!-- ── MODALS ── -->
+        <dialog id="modal-np" aria-labelledby="modal-np-title">
+            <button class="modal-close" aria-label="Fermer">❌</button>
+            <h2 id="modal-np-title">Adhésion NP — Non Lucratif</h2>
+            <p class="modal-price">Gratuit</p>
+            <ul class="modal-benefits">
+                <li>Inscription dans le répertoire des membres</li>
+                <li>Accès aux événements réseau communautaires</li>
+                <li>Bulletins d'information mensuels</li>
+                <li>Soutien aux initiatives sociales et culturelles</li>
+            </ul>
+        </dialog>
+
+        <dialog id="modal-bronze" aria-labelledby="modal-bronze-title">
+            <button class="modal-close" aria-label="Fermer">❌</button>
+            <h2 id="modal-bronze-title">Adhésion Bronze</h2>
+            <p class="modal-price">50 000 FCFA / an</p>
+            <ul class="modal-benefits">
+                <li>Tout ce qui est inclus dans l'adhésion NP</li>
+                <li>Fiche profil entreprise dans le répertoire en ligne</li>
+                <li>Accès aux ateliers et formations de base</li>
+                <li>10 % de réduction sur les événements de la Chambre</li>
+                <li>1 annonce trimestrielle dans la newsletter</li>
+            </ul>
+        </dialog>
+
+        <dialog id="modal-silver" aria-labelledby="modal-silver-title">
+            <button class="modal-close" aria-label="Fermer">❌</button>
+            <h2 id="modal-silver-title">Adhésion Silver</h2>
+            <p class="modal-price">150 000 FCFA / an</p>
+            <ul class="modal-benefits">
+                <li>Tout ce qui est inclus dans l'adhésion Bronze</li>
+                <li>Mise en avant dans la section <em>Spotlights</em> de la page d'accueil</li>
+                <li>Accès à tous les forums et ateliers avancés</li>
+                <li>20 % de réduction sur les événements de la Chambre</li>
+                <li>Mentions mensuelles sur nos réseaux sociaux</li>
+                <li>Accès prioritaire aux rapports économiques régionaux</li>
+            </ul>
+        </dialog>
+
+        <dialog id="modal-gold" aria-labelledby="modal-gold-title">
+            <button class="modal-close" aria-label="Fermer">❌</button>
+            <h2 id="modal-gold-title">Adhésion Gold</h2>
+            <p class="modal-price">300 000 FCFA / an</p>
+            <ul class="modal-benefits">
+                <li>Tout ce qui est inclus dans l'adhésion Silver</li>
+                <li>Position <em>Spotlight</em> prioritaire sur la page d'accueil</li>
+                <li>Bannière publicitaire sur le site de la Chambre</li>
+                <li>Entrée gratuite à tous les événements annuels</li>
+                <li>30 % de réduction sur les événements supplémentaires</li>
+                <li>Siège consultatif lors des réunions de la Chambre</li>
+                <li>Rapport économique personnalisé semestriel</li>
+            </ul>
+        </dialog>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-contact">
+                <p class="footer-title">Chambre de Commerce de Yamoussoukro</p>
+                <address>
+                    Rue des Ministères, Quartier Habitat<br>
+                    Yamoussoukro, Côte d'Ivoire<br>
+                    <a href="mailto:info@ccyamoussoukro.ci">info@ccyamoussoukro.ci</a><br>
+                    <a href="tel:+22527640000">+225 27 64 00 00</a>
+                </address>
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="YouTube">
+                    <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.546 12 3.546 12 3.546s-7.505 0-9.377.504A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.504 9.376.504 9.376.504s7.505 0 9.377-.504a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    </svg>
+                </a>
+                <a href="#" aria-label="Twitter / X">
+                    <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="footer-meta">
+                <p>Dah Evangelis Israël | WDD 231</p>
+                <p>&copy; <span id="currentYear"></span> Chambre de Commerce de Yamoussoukro</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

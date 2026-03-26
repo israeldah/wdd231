@@ -133,4 +133,17 @@
         width: auto;
         text-align: right;
     }
+
+    /* Join: equal two-column grid */
+    .join-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+        gap: 2.5rem;
+    }
+
+    .membership-cards {
+        position: sticky;
+        top: 80px;
+    }
 }

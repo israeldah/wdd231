@@ -865,3 +865,364 @@ main {
     font-weight: 600;
 }
 .spotlight-website a:hover { color: var(--clr-accent); }
+
+/* ========================================
+   JOIN PAGE
+   ======================================== */
+
+.join-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* ── Form section ── */
+.join-form-section h2,
+.membership-cards h2 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--clr-primary);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--clr-surface-alt);
+}
+
+.join-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.join-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--clr-text);
+}
+
+.join-form input[type="text"],
+.join-form input[type="email"],
+.join-form input[type="tel"],
+.join-form select,
+.join-form textarea {
+    width: 100%;
+    padding: 0.4rem 0.65rem;
+    border: 1.5px solid var(--clr-surface-alt);
+    border-radius: var(--radius);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--clr-text);
+    background-color: var(--clr-surface);
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.join-form input:focus,
+.join-form select:focus,
+.join-form textarea:focus {
+    outline: none;
+    border-color: var(--clr-primary);
+    box-shadow: 0 0 0 3px rgba(26, 86, 50, 0.15);
+}
+
+.join-form input:invalid:not(:placeholder-shown),
+.join-form select:invalid {
+    border-color: var(--clr-accent);
+}
+
+.join-form textarea { resize: vertical; min-height: 100px; }
+
+.required-star { color: var(--clr-accent); margin-left: 2px; }
+
+.form-note {
+    font-size: 0.78rem;
+    color: var(--clr-text-muted);
+}
+
+.submit-btn {
+    padding: 0.7rem 2rem;
+    background-color: var(--clr-primary);
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color var(--transition), transform var(--transition);
+}
+
+.submit-btn:hover {
+    background-color: var(--clr-primary-light);
+    transform: translateY(-2px);
+}
+
+/* ── Membership level cards ── */
+.membership-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.level-card {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    background-color: var(--clr-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: 1.35rem 1.5rem;
+    border-left: 6px solid transparent;
+    opacity: 0;
+    animation: cardSlideIn 0.5s ease forwards;
+    transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.level-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateX(4px);
+}
+
+.level-np    { border-left-color: var(--clr-member); }
+.level-bronze{ border-left-color: #cd7f32; }
+.level-silver{ border-left-color: var(--clr-silver); }
+.level-gold  { border-left-color: var(--clr-gold); }
+
+.level-icon {
+    font-size: 2.2rem;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.level-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--clr-text);
+    margin-bottom: 0.15rem;
+}
+
+.level-price {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--clr-primary);
+}
+
+.level-subtitle {
+    font-size: 0.82rem;
+    color: var(--clr-text-muted);
+}
+
+.level-info-btn {
+    margin-left: auto;
+    flex-shrink: 0;
+    padding: 0.4rem 0.85rem;
+    background-color: transparent;
+    border: 1.5px solid var(--clr-primary);
+    border-radius: 20px;
+    color: var(--clr-primary);
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition), color var(--transition);
+}
+
+.level-info-btn:hover {
+    background-color: var(--clr-primary);
+    color: #ffffff;
+}
+
+/* Card entrance animation */
+@keyframes cardSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ── Membership modals ── */
+dialog.modal-membership {
+    border: none;
+    border-radius: var(--radius-lg);
+    padding: 2rem 1.75rem 1.75rem;
+    background-color: var(--clr-surface);
+    box-shadow: 0 0 3rem rgba(0,0,0,0.25);
+    width: 92%;
+    max-width: 480px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-family: var(--font-body);
+}
+
+dialog.modal-membership[open] {
+    animation: dialogPop 0.25s ease both;
+}
+
+@keyframes dialogPop {
+    from { opacity: 0; transform: translate(-50%, -47%) scale(0.96); }
+    to   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+.modal-close {
+    position: absolute;
+    top: 0.85rem;
+    right: 0.85rem;
+    background: none;
+    border: 1px solid var(--clr-surface-alt);
+    border-radius: var(--radius);
+    padding: 0.25rem 0.6rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: var(--clr-text-muted);
+    transition: background-color var(--transition), color var(--transition);
+}
+
+.modal-close:hover {
+    background-color: var(--clr-accent);
+    color: #fff;
+    border-color: var(--clr-accent);
+}
+
+dialog.modal-membership h2 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--clr-primary);
+    margin-bottom: 0.25rem;
+    padding-right: 2rem;
+}
+
+.modal-price {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--clr-secondary);
+    margin-bottom: 1rem;
+}
+
+.modal-benefits {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.modal-benefits li {
+    font-size: 0.9rem;
+    color: var(--clr-text);
+    padding-left: 1.4rem;
+    position: relative;
+    line-height: 1.5;
+}
+
+.modal-benefits li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: var(--clr-primary);
+    font-size: 0.75rem;
+    top: 0.2em;
+}
+
+/* ========================================
+   THANK YOU PAGE
+   ======================================== */
+
+.thankyou-section {
+    max-width: 640px;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 0 1rem;
+    animation: slideUp 0.5s ease both;
+}
+
+.thankyou-icon {
+    font-size: 3.5rem;
+    margin-bottom: 0.75rem;
+    animation: popIn 0.5s ease 0.2s both;
+}
+
+@keyframes popIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+}
+
+.thankyou-section h1 {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    color: var(--clr-primary);
+    margin-bottom: 0.75rem;
+}
+
+.thankyou-intro {
+    font-size: 1rem;
+    color: var(--clr-text-muted);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.submission-summary {
+    background-color: var(--clr-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: 1.5rem;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.submission-summary h2 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--clr-primary);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--clr-surface-alt);
+}
+
+.summary-list {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.summary-list dt {
+    font-weight: 700;
+    color: var(--clr-text-muted);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    align-self: center;
+}
+
+.summary-list dd {
+    color: var(--clr-text);
+    margin: 0;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 0.65rem 1.75rem;
+    background-color: var(--clr-primary);
+    color: #ffffff;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: background-color var(--transition), transform var(--transition);
+}
+
+.back-btn:hover {
+    background-color: var(--clr-primary-light);
+    color: #fff;
+    transform: translateY(-2px);
+}
