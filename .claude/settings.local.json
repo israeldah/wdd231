@@ -1,7 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(ls -lh \"c:/Users/israe/OneDrive/Desktop/wdd231/images/\"*.jpg \"c:/Users/israe/OneDrive/Desktop/wdd231/images/\"*.jpeg \"c:/Users/israe/OneDrive/Desktop/wdd231/images/\"*.webp)"
-    ]
-  }
-}
