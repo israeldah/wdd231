@@ -986,10 +986,10 @@ main {
     transform: translateX(4px);
 }
 
-.level-np    { border-left-color: var(--clr-member); }
-.level-bronze{ border-left-color: #cd7f32; }
-.level-silver{ border-left-color: var(--clr-silver); }
-.level-gold  { border-left-color: var(--clr-gold); }
+.level-np     { border-left-color: var(--clr-member); animation-delay: 0.05s; }
+.level-bronze { border-left-color: #cd7f32;           animation-delay: 0.15s; }
+.level-silver { border-left-color: var(--clr-silver); animation-delay: 0.25s; }
+.level-gold   { border-left-color: var(--clr-gold);   animation-delay: 0.35s; }
 
 .level-icon {
     font-size: 2.2rem;
