@@ -1,0 +1,641 @@
+/* layout.css — Header, navigation, grid, footer, page-specific layouts */
+
+/* ── Header ──────────────────────────────────────────────────────────────────── */
+.site-header {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--primary);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.site-logo:hover {
+  text-decoration: none;
+  color: var(--primary-dark);
+}
+
+.logo-icon {
+  font-size: 1.5rem;
+}
+
+.site-nav {
+  margin-left: auto;
+}
+
+#nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+#nav-menu a {
+  padding: 0.4em 0.8em;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  transition: background var(--transition), color var(--transition);
+}
+
+#nav-menu a:hover,
+#nav-menu a.active {
+  color: var(--primary);
+  background: var(--bg-secondary);
+  text-decoration: none;
+}
+
+#nav-menu a.active {
+  color: var(--primary);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+#theme-toggle {
+  font-size: 1.2rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition);
+}
+
+#theme-toggle:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Hamburger toggle */
+#nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 6px;
+}
+
+#nav-toggle span {
+  display: block;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: all var(--transition);
+}
+
+/* ── Main ─────────────────────────────────────────────────────────────────────── */
+main {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* ── Hero / Search section ───────────────────────────────────────────────────── */
+.hero-section {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg) 100%);
+  border-radius: var(--radius);
+  margin-bottom: 2rem;
+}
+
+.hero-section h1 {
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.search-form {
+  display: flex;
+  max-width: 520px;
+  margin: 0 auto;
+  gap: 0;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1.5px solid var(--border);
+}
+
+.search-form input {
+  flex: 1;
+  border: none;
+  border-radius: 0;
+  padding: 0.65em 1em;
+}
+
+.search-form input:focus {
+  box-shadow: none;
+}
+
+.search-form button {
+  padding: 0.65em 1.2em;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 0;
+  transition: background var(--transition);
+}
+
+.search-form button:hover, .search-form button:focus-visible {
+  background: var(--primary-dark);
+}
+
+/* ── Section heading ─────────────────────────────────────────────────────────── */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* ── Tracks grid ─────────────────────────────────────────────────────────────── */
+.tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.25rem;
+}
+
+/* ── Genre tabs ──────────────────────────────────────────────────────────────── */
+.genre-nav {
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+}
+
+.genre-list {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+  min-width: max-content;
+}
+
+.genre-tab {
+  padding: 0.45em 1em;
+  border-radius: 20px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  background: var(--bg-secondary);
+  border: 1.5px solid var(--border);
+  color: var(--text-secondary);
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.genre-tab:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.genre-tab.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+/* ── Filter / Sort toolbar ───────────────────────────────────────────────────── */
+.filter-toolbar {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.filter-toolbar input {
+  flex: 1;
+  min-width: 180px;
+  max-width: 280px;
+}
+
+.filter-toolbar select {
+  width: auto;
+  min-width: 160px;
+}
+
+/* ── Contact / Favorites layout ──────────────────────────────────────────────── */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* ── Contact Form ─────────────────────────────────────────────────────────────── */
+.contact-section {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+}
+
+.contact-section h2 {
+  margin-bottom: 1.25rem;
+  color: var(--primary);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  color: var(--text);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-submit {
+  margin-top: 0.5rem;
+  width: 100%;
+  padding: 0.7em;
+  background: var(--primary);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  border: none;
+  transition: background var(--transition);
+}
+
+.form-submit:hover, .form-submit:focus-visible {
+  background: var(--primary-dark);
+}
+
+/* ── Favorites section ───────────────────────────────────────────────────────── */
+.favorites-section {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+}
+
+.favorites-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.favorites-header h2 {
+  color: var(--primary);
+}
+
+.fav-count-badge {
+  background: var(--primary);
+  color: #fff;
+  border-radius: 20px;
+  padding: 0.1em 0.6em;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+#clear-favorites {
+  padding: 0.3em 0.8em;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  transition: all var(--transition);
+}
+
+#clear-favorites:hover {
+  background: #e74c3c;
+  color: #fff;
+  border-color: #e74c3c;
+}
+
+.fav-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  margin-bottom: 0.75rem;
+  background: var(--bg-secondary);
+  transition: box-shadow var(--transition);
+}
+
+.fav-card:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.fav-cover {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.fav-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.fav-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fav-artist {
+  font-size: 0.82rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.fav-album, .fav-duration {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.fav-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.btn-play-modal, .btn-remove-fav {
+  padding: 0.3em 0.7em;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1.5px solid var(--border);
+  transition: all var(--transition);
+}
+
+.btn-play-modal {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.btn-play-modal:hover {
+  background: var(--primary-dark);
+}
+
+.btn-remove-fav {
+  background: var(--bg-card);
+  color: var(--text-secondary);
+}
+
+.btn-remove-fav:hover {
+  background: #e74c3c;
+  color: #fff;
+  border-color: #e74c3c;
+}
+
+/* ── Form action page ────────────────────────────────────────────────────────── */
+.action-card {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.action-card h1 {
+  color: var(--primary);
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.submitted-data {
+  margin: 1.25rem 0;
+}
+
+.submitted-data dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem 1rem;
+}
+
+.submitted-data dt {
+  font-weight: 700;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.submitted-data dd {
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.action-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* ── Attributions ────────────────────────────────────────────────────────────── */
+.attributions-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.attributions-list h2 {
+  margin: 1.5rem 0 0.75rem;
+  color: var(--primary);
+}
+
+.attributions-list ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.attributions-list li {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/* ── Footer ──────────────────────────────────────────────────────────────────── */
+.site-footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  #nav-toggle {
+    display: flex;
+  }
+
+  .site-nav {
+    position: relative;
+  }
+
+  #nav-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    flex-direction: column;
+    padding: 0.5rem;
+    min-width: 180px;
+    gap: 0.15rem;
+    z-index: 200;
+  }
+
+  #nav-menu.open {
+    display: flex;
+  }
+
+  #nav-menu a {
+    width: 100%;
+    padding: 0.6em 1em;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-body {
+    grid-template-columns: 1fr;
+    padding: 1.25rem;
+  }
+
+  .modal-cover {
+    width: 100%;
+    height: 200px;
+  }
+
+  .tracks-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .filter-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-toolbar input,
+  .filter-toolbar select {
+    max-width: 100%;
+  }
+
+  .hero-section {
+    padding: 2rem 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tracks-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .header-inner {
+    gap: 0.5rem;
+  }
+
+  .fav-actions {
+    display: none;
+  }
+
+  .fav-card {
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tracks-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
